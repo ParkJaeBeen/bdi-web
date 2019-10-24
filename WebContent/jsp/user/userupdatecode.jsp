@@ -30,6 +30,7 @@ for(int i=0;i<hobbies.length;i++)
 hobby = hobby.substring(0,hobby.length() -1);
 out.println(hobby);
 
+
 String sql = "update user_info ";
 sql += "set ui_id=?,";
 sql += " ui_pwd =?,"; 

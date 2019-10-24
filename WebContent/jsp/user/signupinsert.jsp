@@ -26,7 +26,6 @@ for(int i=0;i<hobbies.length;i++)
 	hobby += hobbies[i] + ",";	
 }
 hobby = hobby.substring(0,hobby.length() -1);
-out.println(hobby);
 
 if(id != null)
 {

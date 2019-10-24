@@ -12,6 +12,7 @@
 </head>
 <body>
 <%
+request.setCharacterEncoding("UTF-8"); 
 String id = request.getParameter("id");
 String pwd = request.getParameter("pwd");
 if(id != null)
@@ -25,6 +26,12 @@ if(id != null)
 	if(rs.next())
 	{
 		out.println("sucess");
+%>
+<script>
+alert("<%=rs.getString("ui_name")%>님 로그인이 성공하셨습니다.");
+location.href="/bdi-web/jsp/user/idlist.jsp";
+</script>
+<%
 	}
 	else
 	{

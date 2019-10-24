@@ -79,8 +79,9 @@ while(rs.next())
 			<td><%=rs.getString("ui_pwd")%></td>
 			<td><%=rs.getString("ui_name")%></td>
 			<td><%=rs.getString("ui_age")%></td>
-			<td><%=rs.getString("ui_etc")%></td>
+			<td><%=rs.getString("ui_etc")%></td> 
 			<td><%=rs.getString("hobby") %></td>
+			<td><a href="/bdi-web/jsp/user/signupdelete.jsp?ui_num=<%=rs.getString("ui_num")%>"><button>삭제하기</button></a></td>
 		</tr> 
 		<%} %>
 </table>
