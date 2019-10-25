@@ -15,8 +15,7 @@
 		<option value="bi_title">제목</option>
 		<option value="bi_user">작성자</option>
 		<option value="bi_content">내용</option>
-		<option value="bi_title,bi_content">제목 + 내용</option>
-		<option value="bi_title,bi_user,bi_content">제목 + 작성자 + 내용</option>
+		<option value="bi_title,bi_user">제목 + 작성자</option>
 	</select> : <input type="text" name="serStr"><button>검색</button>
 </form>
 <body>
@@ -26,7 +25,6 @@
 				<th>번호</th>
 				<th>제목</th>
 				<th>작성자</th>
-				<th>내용</th>
 				<th>작성날짜</th>
 				<th>작성시간</th>
 				<th>수정날짜</th>
@@ -50,17 +48,9 @@
 				{
 					sql += "bi_user like ?";
 				}
-				else if("bi_content".equals(s))
+				else if("bi_title,bi_user".equals(s))
 				{
-					sql += "bi_content like ?";
-				}
-				else if("bi_title,bi_content".equals(s))
-				{
-					sql += "bi_title like ? or bi_content like ?"; 
-				}
-				else if("bi_title,bi_user,bi_content".equals(s))
-				{
-					sql += "bi_title like ? or bi_user like ? or bi_content like ?"; 
+					sql += "bi_title like ? or bi_user like ?"; 
 				}
 				else
 				{
@@ -68,24 +58,18 @@
 				}
 			}
 			sql += " order by bi_num desc";
-			System.out.println(sql);
+			
 			PreparedStatement ps = con.prepareStatement(sql);
 			if(s != null)
 			{
-				if("bi_title".equals(s) || "bi_user".equals(s) || "bi_content".equals(s))
+				if("bi_title".equals(s) || "bi_user".equals(s))
 				{
 					ps.setString(1,"%"+ serStr +"%");  
 				}
-				else if("bi_title,bi_content".equals(s))
+				else if("bi_title,bi_user".equals(s))
 				{
 					ps.setString(1,"%"+ serStr +"%"); 
 					ps.setString(2,"%"+ serStr +"%");
-				}
-				else if("bi_title,bi_user,bi_content".equals(s)) 
-				{
-					ps.setString(1,"%"+ serStr +"%"); 
-					ps.setString(2,"%"+ serStr +"%");
-					ps.setString(3,"%"+ serStr +"%");
 				}
 			}
 			ResultSet rs = ps.executeQuery();
@@ -96,7 +80,6 @@
 				<td><%=rs.getString("bi_num")%></td> 
 				<td><%=rs.getString("bi_title")%></td>
 				<td><%=rs.getString("bi_user")%></td>
-				<td><%=rs.getString("bi_content")%></td>
 				<td><%=rs.getString("bi_credat")%></td>
 				<td><%=rs.getString("bi_cretim") %></td>   
 				<td><%=rs.getString("bi_moddat")%></td>
