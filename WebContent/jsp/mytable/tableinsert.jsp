@@ -35,6 +35,7 @@ alert("작성완료!");
 location.href="/bdi-web/jsp/mytable/table.jsp";
 </script>
 <%
+con.commit();
 }
 %>
 </body>
