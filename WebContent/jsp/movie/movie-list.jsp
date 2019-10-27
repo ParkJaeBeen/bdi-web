@@ -39,10 +39,10 @@ ResultSet rs = ps.executeQuery();
 				out.println("<td>" + rs.getString("mi_age") + "</td>");
 				out.println("<td>" + rs.getString("mi_star_rate") + "</td>");
 				out.println("<td><a href=\"/bdi-web/jsp/movie/movie-delete.jsp?mi_num="+rs.getString("mi_num")+"\"><button>삭제하기</button></a></td>");
-				out.println("</tr>"); 
+				out.println("</tr>");  
 		}
 		%>
 </table> 
-<a href="/bdi-web/jsp/movie/movie-insert.jsp"><button>글쓰기</button></a> 
+<a href="/bdi-web/jsp/movie/movie-insert.jsp"><button>글쓰기</button></a>
 </body>
 </html>

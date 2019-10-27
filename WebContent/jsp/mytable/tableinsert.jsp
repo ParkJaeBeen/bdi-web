@@ -20,7 +20,7 @@ String mt_user = request.getParameter("mt_user");
 String mt_credat = request.getParameter("mt_credat");
 String mt_cretim = request.getParameter("mt_cretim");
 
-String sql = "insert into mytable(mt_num,mt_user,mt_title,mt_content,mt_credat,mt_cretim)";
+String sql = "insert into mytable(mt_num,mt_title,mt_user,mt_content,mt_credat,mt_cretim)";
 sql += "values(SEQ_mytable_mt_num.nextval,?,?,?,TO_CHAR(sysdate,'YYYY-MM-DD'),TO_CHAR(sysdate,'HH24:MI:SS'))";
 PreparedStatement ps = con.prepareStatement(sql);
 ps.setString(1,mt_title);
