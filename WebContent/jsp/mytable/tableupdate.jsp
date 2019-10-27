@@ -37,7 +37,7 @@ while(rs.next())
 		</tr>
 		<tr> 
 			<th>내용</th>
-			<td><textarea type="text" name="bi_content" cols="22" rows="10"><%=rs.getString("mt_content")%></textarea><br></td>
+			<td><textarea type="text" name="mt_content" cols="22" rows="10"><%=rs.getString("mt_content")%></textarea><br></td>
 		</tr>
 		<tr>
 			<td><button>수정완료</button></td>
