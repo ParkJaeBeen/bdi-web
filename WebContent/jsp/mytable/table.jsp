@@ -12,7 +12,7 @@
 </head>
 <body style="text-align:center;">
 <h2>게 시 판</h2> 
-	<table style="text-align:center; margin-left: auto; margin-right: auto;" > 
+	<table style="text-align:center; margin-left: auto; margin-right: auto;"> 
 		<tr>
 			<th>번호</th>
 			<th width="800">제목</th>
@@ -97,5 +97,6 @@
 			</td>
 		</tr>
 	</table>
+	<a href="/bdi-web/jsp/mytable/totaltable.jsp"><button>처음으로돌아가기</button></a>
 </body>
 </html>

@@ -86,5 +86,6 @@ while(rs.next())
 		<%} %>
 </table>
 <a href="/bdi-web/jsp/user/login.jsp"><button>로그인창으로돌아가기</button></a><br>
+<a href="/bdi-web/jsp/mytable/totaltable.jsp"><button>처음으로돌아가기</button></a>
 </body>
 </html>

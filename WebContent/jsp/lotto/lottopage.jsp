@@ -63,5 +63,6 @@ String num6 = lottoList.get(5) + "";
 	</table>
 </form>
 <a href="/bdi-web/jsp/lotto/lottoinsert.jsp"><button>번호뽑기</button></a>
+<a href="/bdi-web/jsp/mytable/totaltable.jsp"><button>처음으로돌아가기</button></a>
 </body>
 </html>

@@ -44,5 +44,6 @@ ResultSet rs = ps.executeQuery();
 		%>
 </table> 
 <a href="/bdi-web/jsp/movie/movie-insert.jsp"><button>글쓰기</button></a>
+<a href="/bdi-web/jsp/mytable/totaltable.jsp"><button>처음으로돌아가기</button></a>
 </body>
 </html>

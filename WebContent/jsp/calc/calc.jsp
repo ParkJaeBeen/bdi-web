@@ -51,5 +51,6 @@ public void test(JspWriter out) throws Exception
 		<input type="number" name="result" value="<%=result%>">
 		<button>계산</button>
 	</form>
+	<a href="/bdi-web/jsp/mytable/totaltable.jsp"><button>처음으로돌아가기</button></a>
 </body>
 </html>

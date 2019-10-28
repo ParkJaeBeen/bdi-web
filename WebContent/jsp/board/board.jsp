@@ -90,5 +90,6 @@
 			<%} %>
 		</table>
 	<a href="/bdi-web/jsp/board/boardispage.jsp"><button>글작성</button></a>
+	<a href="/bdi-web/jsp/mytable/totaltable.jsp"><button>처음으로돌아가기</button></a>
 </body>
 </html>
